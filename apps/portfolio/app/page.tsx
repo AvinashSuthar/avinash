@@ -1,9 +1,10 @@
+import { Button } from "@repo/ui/button";
 
 export default function Home() {
   return (
-    <div>
-      This is my portfolio
-
+    <div className="border">
+      <button>hwllo</button>
+      <Button />
     </div>
   );
 }
