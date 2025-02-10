@@ -1,4 +1,3 @@
-import { div } from "motion/react-client";
 import { Spotlight } from "./ui/Spotlight";
 
 const Hero = () => {
