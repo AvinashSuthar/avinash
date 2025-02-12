@@ -3,7 +3,7 @@
 export const Button = () => {
   return (
     <button
-      className="border bg-red-500"
+      className="border bg-red-500 "
       onClick={() => alert(`Hello from yo app!`)}
     >
       button
