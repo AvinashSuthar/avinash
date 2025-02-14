@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String  @id @default(uuid()) // Unique user ID
+  name     String // Full name
+  email    String  @unique // Unique email for login
+  password String? // Hashed password (if using credentials)
+  image    String? // Profile picture (URL from Cloudinary/S3)
+  role     Role    @default(USER) // Role-based access (Admin/User)
+  provider String  @default("credentials") // Auth provider (Google, GitHub, etc.)
+
+  blogs     Blog[] // Relation: User can write multiple blogs
+  createdAt DateTime @default(now()) // User creation date
+  updatedAt DateTime @updatedAt // Auto-updates on change
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model Blog {
+  id        String   @id @default(uuid()) // Unique blog ID
+  title     String   @db.Text // Blog title (supports long text)
+  slug      String   @unique // SEO-friendly URL slug
+  content   Json // Blog content (TipTap JSON)
+  image     String? // Thumbnail image URL
+  authorId  String // Foreign key (User ID)
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  tags      String[] // Array of tags for filtering
+  published Boolean  @default(false) // Blog publish status
+  views     Int      @default(0) // View count
+  likes     Int      @default(0) // Like count
+  createdAt DateTime @default(now()) // Creation date
+  updatedAt DateTime @updatedAt // Auto-update on edit
+}
