@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://avinashsuthar.in", // Change this to your actual domain
-  generateRobotsTxt: true, // Generate robots.txt file
-  sitemapSize: 5000,
-  exclude: ["/admin", "/dashboard"], // Exclude private pages
+  siteUrl: "https://avinashsuthar.in", // Your domain
+  generateRobotsTxt: true, // Generate robots.txt
+  sitemapBaseFileName: "sitemap",
+  generateIndexSitemap: false, // Disable index sitemap if you don't have multiple sitemaps
 };
