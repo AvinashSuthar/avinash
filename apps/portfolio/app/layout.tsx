@@ -60,13 +60,15 @@ export default function RootLayout({
                 name: "Avinash Suthar",
                 url: "https://avinashsuthar.in",
                 sameAs: [
-                  "https://github.com/YOUR_GITHUB",
-                  "https://linkedin.com/in/YOUR_LINKEDIN",
+                  "https://github.com/AvinashSuthar",
+                  "https://www.linkedin.com/in/avinash-suthar-970a56230",
+                  "https://www.instagram.com/avinashsutharr",
+                  "https://x.com/avinash__suthar",
                 ],
                 jobTitle: "Software Developer",
                 worksFor: {
                   "@type": "Organization",
-                  name: "Freelance / Company Name",
+                  name: "Freelancer / Avinash Suthar",
                 },
               }),
             }}
