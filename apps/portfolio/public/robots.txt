@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://avinashsuthar.in
+
+# Sitemaps
+Sitemap: https://avinashsuthar.in/sitemap.xml

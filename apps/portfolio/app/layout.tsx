@@ -2,12 +2,39 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Avinash Suthar",
-  description: "Avinash Suthar Full Stack Developer",
+export const metadata = {
+  title: "Avinash Suthar | Software Developer",
+  description:
+    "I am a software developer specializing in Next.js, TypeScript, and modern web technologies.",
+  keywords:
+    "Avinash Suthar, Software Developer, Next.js, TypeScript, Web Development",
+  openGraph: {
+    title: "Avinash Suthar | Software Developer",
+    description:
+      "Building high-performance web applications with Next.js and modern technologies.",
+    url: "https://avinashsuthar.in",
+    siteName: "Avinash Suthar Portfolio",
+    images: [
+      {
+        url: "https://avinashsuthar.in/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Avinash Suthar Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Avinash Suthar | Software Developer",
+    description:
+      "Building high-performance web applications with Next.js and modern technologies.",
+    images: ["https://avinashsuthar.in/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -17,6 +44,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <head>
+          <link rel="canonical" href="https://avinashsuthar.in" />
+
+          {/* JSON-LD Schema.org for SEO */}
+          <Script
+            id="json-ld"
+            type="application/ld+json"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Avinash Suthar",
+                url: "https://avinashsuthar.in",
+                sameAs: [
+                  "https://github.com/YOUR_GITHUB",
+                  "https://linkedin.com/in/YOUR_LINKEDIN",
+                ],
+                jobTitle: "Software Developer",
+                worksFor: {
+                  "@type": "Organization",
+                  name: "Freelance / Company Name",
+                },
+              }),
+            }}
+          />
+        </head>
+      </head>
       <body className={inter.className}>
         {" "}
         <ThemeProvider
