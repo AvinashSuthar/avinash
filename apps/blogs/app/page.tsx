@@ -1,3 +1,4 @@
+import SignIn from "@/components/signin";
 import Hero from "@repo/ui/hero";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <main>
       <div>
         <Hero />
+        <SignIn />
       </div>
     </main>
   );

@@ -57,6 +57,23 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Person",
+                mainEntity: {
+                  "@type": "Person",
+                  name: "Avinash Suthar", // Ensure this field is present
+                  url: "https://avinashsuthar.in",
+                  sameAs: [
+                    "https://github.com/AvinashSuthar",
+                    "https://www.linkedin.com/in/avinash-suthar-970a56230",
+                    "https://www.instagram.com/avinashsutharr",
+                    "https://x.com/avinash__suthar",
+                  ],
+                  jobTitle: "Software Developer",
+                  worksFor: {
+                    "@type": "Organization",
+                    name: "Freelancer / Avinash Suthar",
+                  },
+                },
+
                 name: "Avinash Suthar",
                 url: "https://avinashsuthar.in",
                 sameAs: [
