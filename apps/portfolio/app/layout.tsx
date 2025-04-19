@@ -45,36 +45,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <head>
-          <link rel="canonical" href="https://avinashsuthar.in" />
+        <link rel="canonical" href="https://avinashsuthar.in" />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5564117908306170"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
 
-          {/* JSON-LD Schema.org for SEO */}
-          <Script
-            id="json-ld"
-            type="application/ld+json"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
+        {/* JSON-LD Schema.org for SEO */}
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              mainEntity: {
                 "@type": "Person",
-                mainEntity: {
-                  "@type": "Person",
-                  name: "Avinash Suthar", // Ensure this field is present
-                  url: "https://avinashsuthar.in",
-                  sameAs: [
-                    "https://github.com/AvinashSuthar",
-                    "https://www.linkedin.com/in/avinash-suthar-970a56230",
-                    "https://www.instagram.com/avinashsutharr",
-                    "https://x.com/avinash__suthar",
-                  ],
-                  jobTitle: "Software Developer",
-                  worksFor: {
-                    "@type": "Organization",
-                    name: "Freelancer / Avinash Suthar",
-                  },
-                },
-
-                name: "Avinash Suthar",
+                name: "Avinash Suthar", // Ensure this field is present
                 url: "https://avinashsuthar.in",
                 sameAs: [
                   "https://github.com/AvinashSuthar",
@@ -87,10 +77,24 @@ export default function RootLayout({
                   "@type": "Organization",
                   name: "Freelancer / Avinash Suthar",
                 },
-              }),
-            }}
-          />
-        </head>
+              },
+
+              name: "Avinash Suthar",
+              url: "https://avinashsuthar.in",
+              sameAs: [
+                "https://github.com/AvinashSuthar",
+                "https://www.linkedin.com/in/avinash-suthar-970a56230",
+                "https://www.instagram.com/avinashsutharr",
+                "https://x.com/avinash__suthar",
+              ],
+              jobTitle: "Software Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelancer / Avinash Suthar",
+              },
+            }),
+          }}
+        />
       </head>
       <body className={inter.className}>
         {" "}
