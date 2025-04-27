@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import Script from "next/script";
+import GoogleAd from "@/components/Google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +54,17 @@ export default function RootLayout({
           name="google-adsense-account"
           content="ca-pub-5564117908306170"
         ></meta>
+        <script
+          async
+          custom-element="amp-ad"
+          src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+        ></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5564117908306170"
+          crossOrigin="anonymous"
+        ></script>
+
         <link rel="canonical" href="https://avinashsuthar.in" />
         <Script
           async
@@ -111,6 +123,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <GoogleAd />
           {children}
         </ThemeProvider>
       </body>
