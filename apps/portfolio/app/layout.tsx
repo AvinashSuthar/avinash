@@ -45,7 +45,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="google-adsense-account" content="ca-pub-5564117908306170"></meta>
+        <meta
+          name="google-site-verification"
+          content="ca-pub-5564117908306170"
+        />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-5564117908306170"
+        ></meta>
         <link rel="canonical" href="https://avinashsuthar.in" />
         <Script
           async
