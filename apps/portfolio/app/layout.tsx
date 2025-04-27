@@ -64,6 +64,11 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5564117908306170"
           crossOrigin="anonymous"
         ></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5564117908306170"
+          crossOrigin="anonymous"
+        ></script>
 
         <link rel="canonical" href="https://avinashsuthar.in" />
         <Script
