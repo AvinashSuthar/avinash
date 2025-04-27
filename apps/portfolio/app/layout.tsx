@@ -61,7 +61,6 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        {/* JSON-LD Schema.org for SEO */}
         <Script
           id="json-ld"
           type="application/ld+json"
