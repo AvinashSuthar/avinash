@@ -50,15 +50,8 @@ export default function RootLayout({
           name="google-site-verification"
           content="ca-pub-5564117908306170"
         />
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-5564117908306170"
-        ></meta>
-        <script
-          async
-          custom-element="amp-ad"
-          src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-        ></script>
+
+      
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5564117908306170"
@@ -128,7 +121,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <GoogleAd />
+          {/* <GoogleAd /> */}
           {children}
         </ThemeProvider>
       </body>
