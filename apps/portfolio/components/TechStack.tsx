@@ -100,7 +100,7 @@ const TechStack = () => {
                 </div>
                 {/* The padding-x and w-full classes are used to add horizontal padding to the 
                     text and make it take up the full width of the component. */}
-                <div className="padding-x w-full">
+                <div className="px-2 w-full ">
                   {/* The p tag contains the name of the tech stack icon. */}
                   <p>{techStackIcon.name}</p>
                 </div>
