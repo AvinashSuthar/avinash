@@ -81,11 +81,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Wanderlust- Hotel Booking Website",
-    des: "Wanderlust is a dynamic website built with Node.js, Express, and EJS, designed for seamless hotel and room hosting.",
-    img: "/wanderlust.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://wanderlust.avinashsuthar.in/listing",
+    title: "Solvaotions - A digital Agency",
+    des: "Solvaotions is a digital agency website built with Next.js, Tailwind CSS, GSAP, ThreeJs and Framer Motion.",
+
+    img: "/solvao.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "https://www.solvaotions.tech",
   },
   {
     id: 3,
