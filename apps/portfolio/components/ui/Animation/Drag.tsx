@@ -37,15 +37,22 @@ export function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {
 }
 
 const ball = {
-  width: 50,
-  height: 50,
+  width: 20,
+  height: 20,
   boxShadow:
-    "0 0 0 1px rgba(255, 255, 255, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1)",
-  backgroundColor: "#ffffff",
+    "0 0 0 2px rgba(255,255,255,0.2), 0 8px 24px 4px rgba(0,0,0,0.18), 0 0 40px 10px #a0e9ff80",
+  background: "radial-gradient(circle at 30% 30%, #a0e9ff 60%, #38bdf8 100%)",
   borderRadius: "50%",
-  position: "fixed", // Important for full-page
+  position: "fixed",
   top: 0,
   left: 0,
   zIndex: 9999,
-  pointerEvents: "none", // So it doesn’t block clicks
+  pointerEvents: "none",
+  transition: "box-shadow 0.2s, background 0.2s",
 };
+if (typeof window !== "undefined") {
+  document.body.style.cursor = "none";
+  document.body.addEventListener("pointermove", () => {
+    document.body.style.cursor = "none";
+  });
+}

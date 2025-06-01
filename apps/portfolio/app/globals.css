@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.RGB-Text {
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  background-size: 800% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,7 +88,7 @@
 
 @layer base {
   * {
-    @apply border-border !scroll-smooth;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
@@ -86,11 +106,9 @@
   .flex-center {
     @apply flex justify-center items-center;
   }
- 
 }
 
 @layer components {
-
   .tech-grid {
     @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
   }
@@ -99,11 +117,11 @@
     @apply flex justify-center items-center w-52 h-60 relative;
   }
 
-   .section-padding {
+  .section-padding {
     @apply px-5 md:px-10 md:mt-40 mt-20;
   }
 
-    .card-border {
+  .card-border {
     @apply border border-black-100 bg-black-100;
   }
 
@@ -127,10 +145,9 @@
     @apply flex justify-center items-center w-52 h-60 relative;
   }
 
-   .padding-x {
+  .padding-x {
     @apply px-5 md:px-10;
   }
-
 
   .hero-badge {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
@@ -139,6 +156,4 @@
   .hero-3d-layout {
     @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
   }
- 
 }
-

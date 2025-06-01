@@ -5,6 +5,7 @@ import MagicButton from "./MagicButton";
 import Link from "next/link";
 import OpenToWorkBadge from "./OpenToWorkBadge";
 import Drag from "./ui/Animation/Drag";
+import AnimationController from "./ui/Animation/AnimationController";
 
 const Footer = () => {
   return (
@@ -12,6 +13,8 @@ const Footer = () => {
       className="w-full lg:mb-0 md:mb-[50px] mb-[100px] pb-10 bg-black-100 "
       id="contact"
     >
+      <AnimationController selector=".slide-left" animation="slide-left" />
+      <AnimationController selector=".slide-right" animation="slide-right" />
       <div
         className="flex flex-col items-center h-[90vh] justify-center relative overflow-hidden"
         style={{
@@ -35,10 +38,10 @@ radial-gradient(circle at center, rgba(0,3,25,0.8) 20%, rgba(0,3,25,1) 100%)
         <div />
 
         <div className="z-10 text-6xl text-center mb-10">
-          <h1 className="mb-4">
+          <h1 className="mb-4 slide-left">
             FROM CONCEPT TO <span className="font-bold"> CREATION </span>{" "}
           </h1>{" "}
-          <h1>
+          <h1 className="slide-right">
             {" "}
             LET's MAKE IT <span className="font-bold"> HAPPEN!</span>
           </h1>

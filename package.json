@@ -31,5 +31,8 @@
     "*.{js,ts,jsx,tsx,json,css,md}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42"
   }
 }
